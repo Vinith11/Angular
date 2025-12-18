@@ -6,3 +6,25 @@
 
 <!-- event binding example: -->
 <button (click)="handleClick()">event binding example</button>
+
+<div *ngIf="loggedIn; else guest">
+  <ul>
+    <li *ngFor="let user of users">{{ user }}</li>
+  </ul>
+</div>
+
+<ng-template #guest>
+  <p>Please login</p>
+</ng-template>
+
+
+<input [(ngModel)]="username" placeholder="Enter name">
+
+<button (click)="login()">Login</button>
+
+<p *ngIf="loggedIn">
+  Welcome, {{ username }}
+</p>
+
+
+

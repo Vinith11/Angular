@@ -1,0 +1,12 @@
+<p>user-detail works!</p>
+
+<h2>User Detail</h2>
+
+<div *ngIf="user; else noUser">
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+</div>
+
+<ng-template #noUser>
+  <p>User not found</p>
+</ng-template>
